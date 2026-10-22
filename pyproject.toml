@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "auralith"
+version = "0.1.0"
+description = "Local reference-based audio mastering platform."
+readme = "README.md"
+requires-python = ">=3.14"
+license = { text = "GPL-3.0-only" }
+authors = [{ name = "Auralith contributors" }]
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

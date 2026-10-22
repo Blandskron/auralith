@@ -1,0 +1,1 @@
+"""Agnara capability runtime adapter."""
