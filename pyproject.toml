@@ -8,9 +8,24 @@ version = "0.1.0"
 description = "Local reference-based audio mastering platform."
 readme = "README.md"
 requires-python = ">=3.14"
-license = { text = "GPL-3.0-only" }
 authors = [{ name = "Auralith contributors" }]
-dependencies = []
+dependencies = [
+	"agnara==1.0.3",
+	"librosa==1.0.0",
+	"matchering==2.0.6",
+	"numpy==2.5.4",
+	"pyloudnorm==0.2.0",
+	"scipy==1.18.1",
+	"soundfile==0.14.0",
+	"streamlit==1.66.1",
+]
+
+[project.optional-dependencies]
+dev = [
+	"mypy==1.18.2",
+	"pytest==9.1.1",
+	"ruff==0.17.1",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]

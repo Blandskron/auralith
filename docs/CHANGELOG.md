@@ -4,6 +4,7 @@
 
 ### Añadido
 
+- Dependencias runtime y de desarrollo fijadas para Python 3.14, con `requirements.lock` reproducible.
 - Diagnóstico inicial del repositorio.
 - Roadmap por fases y tablero Kanban trazable.
 - Arquitectura modular inicial y registro de decisiones.
