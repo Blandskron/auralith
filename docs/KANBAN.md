@@ -5,9 +5,9 @@ Fuente de verdad del avance. Estados permitidos: `NO INICIADA`, `INICIADA`, `TER
 ## Resumen
 
 - Corte: 2026-10-22.
-- Total: 116 tareas; `TERMINADA`: 15; `INICIADA`: 1; `NO INICIADA`: 100.
-- Avance informativo: 12.9% (`15 / 116`), no esfuerzo completado.
-- Bloqueos: ninguno. Siguiente tarea elegible: `AUD-007`.
+- Total: 116 tareas; `TERMINADA`: 16; `INICIADA`: 0; `NO INICIADA`: 100.
+- Avance informativo: 13.8% (`16 / 116`), no esfuerzo completado.
+- Bloqueos: ninguno. Siguiente tarea elegible: `AUD-010`.
 
 ## Registro
 
@@ -22,9 +22,8 @@ Los campos de cada fila son: ID, título, descripción, fase, prioridad, depende
 | AUD-005 | Crear backlog y Kanban | Registrar tareas, dependencias y criterios. | 0 | Alta | AUD-003, AUD-004 | Las 69 tareas tienen trazabilidad y estado. | Conteo y revisión de tabla. | TERMINADA | 2026-10-22 | 2026-10-22 | `KANBAN.md` |
 | AUD-006 | Estrategia de pruebas | Definir pruebas unitarias, integración, audio y seguridad. | 0 | Alta | AUD-003, AUD-004 | Ninguna tarea puede cerrarse sin evidencia de validación. | Revisión de criterios. | TERMINADA | 2026-10-22 | 2026-10-22 | `KANBAN.md`, `ARCHITECTURE.md` |
 | AUD-007 | Estructura del proyecto | Crear paquete, tests y configuración base. | 1 | Alta | AUD-001..006 | Importación limpia y estructura documentada. | Smoke de importación. | TERMINADA | 2026-10-22 | 2026-10-22 | `compileall`, importación de capas; pytest pendiente de AUD-008 |
-| AUD-008 | Entorno y dependencias | Fijar Python y dependencias reproducibles. | 1 | Alta | AUD-002, AUD-007 | Instalación limpia en entorno nuevo. | Instalación reproducible. | INICIADA | 2026-10-22 | - | Resolvedor pip compatible; instalación y lockfile pendientes |
 | AUD-008 | Entorno y dependencias | Fijar Python y dependencias reproducibles. | 1 | Alta | AUD-002, AUD-007 | Instalación limpia en entorno nuevo. | Instalación reproducible. | TERMINADA | 2026-10-22 | 2026-10-22 | `pyproject.toml`, `requirements.lock`; venv Python 3.14, pytest 1 passed |
-| AUD-009 | Configuración, logs y errores | Añadir configuración tipada y errores de dominio. | 1 | Alta | AUD-007 | Errores controlados y logs sin datos sensibles. | Unitarias. | NO INICIADA | - | - | - |
+| AUD-009 | Configuración, logs y errores | Añadir configuración tipada y errores de dominio. | 1 | Alta | AUD-007 | Errores controlados y logs sin datos sensibles. | Unitarias. | TERMINADA | 2026-10-27 | 2026-10-27 | `src/auralith/config/settings.py`, `src/auralith/config/logging.py`, `src/auralith/domain/errors.py`, `tests/unit/test_settings.py`; pytest |
 | AUD-010 | Lint, tipos y pruebas | Configurar Ruff, tipado estático y pytest. | 1 | Alta | AUD-007, AUD-008 | Checks reproducibles sin errores. | Ruff, typecheck, pytest. | NO INICIADA | - | - | - |
 | AUD-011 | CI | Automatizar calidad con GitHub Actions. | 1 | Media | AUD-010 | Workflow ejecuta los checks. | Ejecución CI. | NO INICIADA | - | - | - |
 | AUD-012 | Instalación | Documentar preparación y ejecución local. | 1 | Media | AUD-008, AUD-011 | Usuario puede instalar desde cero. | Seguir README. | NO INICIADA | - | - | - |
