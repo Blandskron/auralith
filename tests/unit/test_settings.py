@@ -1,7 +1,7 @@
 import pytest
 
 from auralith.config.settings import AppSettings
-from auralith.domain.errors import ConfigurationError, InvalidAudioError, AuralithError
+from auralith.domain.errors import AuralithError, ConfigurationError, InvalidAudioError
 
 
 def test_settings_read_valid_environment(monkeypatch: pytest.MonkeyPatch) -> None:
@@ -16,7 +16,9 @@ def test_settings_read_valid_environment(monkeypatch: pytest.MonkeyPatch) -> Non
     assert settings.log_level == "DEBUG"
 
 
-def test_settings_reject_invalid_positive_integer(monkeypatch: pytest.MonkeyPatch) -> None:
+def test_settings_reject_invalid_positive_integer(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
     monkeypatch.setenv("AURALITH_MAX_INPUT_BYTES", "0")
 
     with pytest.raises(ConfigurationError):
