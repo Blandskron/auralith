@@ -1,7 +1,7 @@
 """Configuración tipada y validada para la ejecución local."""
 
-from dataclasses import dataclass
 import os
+from dataclasses import dataclass
 from pathlib import Path
 
 from auralith.domain.errors import ConfigurationError
@@ -19,7 +19,7 @@ class AppSettings:
     log_level: str = "INFO"
 
     @classmethod
-    def from_env(cls) -> "AppSettings":
+    def from_env(cls) -> AppSettings:
         """Construye ajustes desde variables `AURALITH_*` o sus valores por defecto."""
         defaults = cls()
         return cls(
@@ -37,7 +37,9 @@ class AppSettings:
                 defaults.processing_timeout_seconds,
             ),
             temp_dir=Path(os.environ.get("AURALITH_TEMP_DIR", defaults.temp_dir)),
-            log_level=_log_level(os.environ.get("AURALITH_LOG_LEVEL", defaults.log_level)),
+            log_level=_log_level(
+                os.environ.get("AURALITH_LOG_LEVEL", defaults.log_level)
+            ),
         )
 
 
