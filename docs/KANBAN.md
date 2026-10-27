@@ -5,9 +5,9 @@ Fuente de verdad del avance. Estados permitidos: `NO INICIADA`, `INICIADA`, `TER
 ## Resumen
 
 - Corte: 2026-10-22.
-- Total: 116 tareas; `TERMINADA`: 17; `INICIADA`: 0; `NO INICIADA`: 99.
-- Avance informativo: 14.7% (`17 / 116`), no esfuerzo completado.
-- Bloqueos: ninguno. Siguiente tarea elegible: `AUD-011`.
+- Total: 116 tareas; `TERMINADA`: 18; `INICIADA`: 0; `NO INICIADA`: 98.
+- Avance informativo: 15.5% (`18 / 116`), no esfuerzo completado.
+- Bloqueos: ninguno. Siguiente tarea elegible: `AUD-012`.
 
 ## Registro
 
@@ -25,7 +25,7 @@ Los campos de cada fila son: ID, título, descripción, fase, prioridad, depende
 | AUD-008 | Entorno y dependencias | Fijar Python y dependencias reproducibles. | 1 | Alta | AUD-002, AUD-007 | Instalación limpia en entorno nuevo. | Instalación reproducible. | TERMINADA | 2026-10-22 | 2026-10-22 | `pyproject.toml`, `requirements.lock`; venv Python 3.14, pytest 1 passed |
 | AUD-009 | Configuración, logs y errores | Añadir configuración tipada y errores de dominio. | 1 | Alta | AUD-007 | Errores controlados y logs sin datos sensibles. | Unitarias. | TERMINADA | 2026-10-27 | 2026-10-27 | `src/auralith/config/settings.py`, `src/auralith/config/logging.py`, `src/auralith/domain/errors.py`, `tests/unit/test_settings.py`; pytest |
 | AUD-010 | Lint, tipos y pruebas | Configurar Ruff, tipado estático y pytest. | 1 | Alta | AUD-007, AUD-008 | Checks reproducibles sin errores. | Ruff, typecheck, pytest. | TERMINADA | 2026-10-27 | 2026-10-27 | `pyproject.toml`; `ruff check src tests`, `mypy src`, `pytest -q` |
-| AUD-011 | CI | Automatizar calidad con GitHub Actions. | 1 | Media | AUD-010 | Workflow ejecuta los checks. | Ejecución CI. | NO INICIADA | - | - | - |
+| AUD-011 | CI | Automatizar calidad con GitHub Actions. | 1 | Media | AUD-010 | Workflow ejecuta los checks. | Ejecución CI. | TERMINADA | 2026-10-27 | 2026-10-27 | `.github/workflows/quality.yml`; YAML válido, `ruff check src tests`, `mypy src`, `pytest -q` |
 | AUD-012 | Instalación | Documentar preparación y ejecución local. | 1 | Media | AUD-008, AUD-011 | Usuario puede instalar desde cero. | Seguir README. | NO INICIADA | - | - | - |
 | AUD-013 | Validación WAV | Validar entradas WAV seguras. | 2 | Alta | AUD-008..010 | Rechaza corruptos y límites; acepta formatos soportados. | Formato y límites. | NO INICIADA | - | - | - |
 | AUD-014 | Adaptador Matchering | Integrar el motor detrás de contrato. | 2 | Alta | AUD-002, AUD-013 | Adaptador invocable y aislado. | Fixture autorizado. | NO INICIADA | - | - | - |
